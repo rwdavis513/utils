@@ -68,6 +68,8 @@ set sw=4 ts=4 sts=4                    " Defaults: four spaces per tab
 autocmd FileType html :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType css :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 
+nmap ,2 :set shiftwidth=2<cr>
+
 " Use brighter colors if your xterm has a dark background.
   set background=dark
 
@@ -111,10 +113,10 @@ let g:netrw_list_hide= ".*\.pyc$,*\.pyo$,.*\.swp$"
 " This beauty remembers where you were the last time you edited the file, and returns to the same position.
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-nnoremap r q
+"nnoremap r q
 
 " Quit with 'q' instead of ':q'. VERY useful!
-map q :q<CR>
+"map q :q<CR>
 
 
 "------------------------------------------------------------------------------
@@ -132,5 +134,11 @@ vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
 inoremap jk <esc>
 
 nmap ,p :set invpaste paste?<cr>
+
+" CtrlP shortcuts
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+nmap ; :CtrlPBuffer<CR>
 
 colorscheme torte
