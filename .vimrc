@@ -87,9 +87,8 @@ nmap :WQ :wq
 
 
 " Use 'g' to go to the top of the file.
-map g 1G
-map f <C-D>
-map F <C-U>
+"map g 1G
+map gf <C-w>gf
 map W <C-W>w
 map ] <C-W>j<C-W>_
 map [ <C-W>k<C-W>_
