@@ -80,6 +80,8 @@ nmap :Q :q
 nmap :Wq :wq
 nmap :WQ :wq
 
+nnoremap Q <nop>
+
 
 "------------------------------------------------------------------------------
 " Abbreviations.
