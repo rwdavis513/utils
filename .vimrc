@@ -136,10 +136,4 @@ inoremap jk <esc>
 
 nmap ,p :set invpaste paste?<cr>
 
-" CtrlP shortcuts
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-nmap ; :CtrlPBuffer<CR>
-
 colorscheme torte
