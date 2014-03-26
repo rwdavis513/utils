@@ -136,4 +136,9 @@ inoremap jk <esc>
 
 nmap ,p :set invpaste paste?<cr>
 
+nmap ,fh :set ft=html<cr>
+nmap ,fp :set ft=php<cr>
+
 colorscheme torte
+
+
