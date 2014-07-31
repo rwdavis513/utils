@@ -67,6 +67,9 @@ endif
 set sw=4 ts=4 sts=4                    " Defaults: four spaces per tab
 autocmd FileType html :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
 autocmd FileType css :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
+autocmd FileType python :setlocal ts=4 smarttab expandtab
+
+nmap ,t4 :set ts=4<cr>
 
 nmap ,2 :set shiftwidth=2<cr>
 
