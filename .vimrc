@@ -117,11 +117,6 @@ let g:netrw_list_hide= ".*\.pyc$,*\.pyo$,.*\.swp$"
 " This beauty remembers where you were the last time you edited the file, and returns to the same position.
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-"nnoremap r q
-
-" Quit with 'q' instead of ':q'. VERY useful!
-"map q :q<CR>
-
 
 "------------------------------------------------------------------------------
 " Miscellaneous stuff.
@@ -141,6 +136,9 @@ nmap ,p :set invpaste paste?<cr>
 
 nmap ,fh :set ft=html<cr>
 nmap ,fp :set ft=php<cr>
+
+" Killing Ex mode
+nnoremap Q @q
 
 colorscheme torte
 
