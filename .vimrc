@@ -126,7 +126,6 @@ let g:netrw_list_hide= ".*\.pyc$,*\.pyo$,.*\.swp$"
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 
-
 "------------------------------------------------------------------------------
 " Miscellaneous stuff.
 "------------------------------------------------------------------------------
@@ -142,6 +141,8 @@ nmap ,fh :set ft=html<cr>
 nmap ,fp :set ft=php<cr>
 
 set scrolloff=5
+" Killing Ex mode
+nnoremap Q @q
 
 colorscheme torte
 
