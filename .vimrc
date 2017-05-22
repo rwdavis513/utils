@@ -3,6 +3,13 @@
 " $Id: .vimrc 331 2005-09-07 21:09:32Z uh1763 $
 "------------------------------------------------------------------------------
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/MatchTagAlways'
+call vundle#end()
+highlight MatchParen cterm=bold ctermbg=black ctermfg=green
+
 version 6.3
 
 
@@ -82,6 +89,7 @@ nmap :W :w
 nmap :Q :q
 nmap :Wq :wq
 nmap :WQ :wq
+nmap :WS w !sudo tee % > /dev/null
 
 nnoremap Q <nop>
 
@@ -117,20 +125,11 @@ let g:netrw_list_hide= ".*\.pyc$,*\.pyo$,.*\.swp$"
 " This beauty remembers where you were the last time you edited the file, and returns to the same position.
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-"nnoremap r q
-
-" Quit with 'q' instead of ':q'. VERY useful!
-"map q :q<CR>
 
 
 "------------------------------------------------------------------------------
 " Miscellaneous stuff.
 "------------------------------------------------------------------------------
-
-
-" ROT13 decode/encode the selected text (visual mode).
-" Alternative: 'unmap g' and then use 'g?'.
-vmap rot :!tr A-Za-z N-ZA-Mn-za-m<CR>
 
 " Make p in visual mode replace the selected text with the "" register.
 vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
@@ -142,6 +141,7 @@ nmap ,p :set invpaste paste?<cr>
 nmap ,fh :set ft=html<cr>
 nmap ,fp :set ft=php<cr>
 
-colorscheme torte
+set scrolloff=5
 
+colorscheme torte
 
