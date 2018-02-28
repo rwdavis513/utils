@@ -3,3 +3,4 @@ source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=$HOME/.virtualenvs
 alias gs='git status'
 alias gl='git log | head'
+alias jn='jupyter notebook'
