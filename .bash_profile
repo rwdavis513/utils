@@ -1,7 +1,9 @@
 VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=$HOME/.virtualenvs
-export PS1="\e[1;33m\A:\h:\w \$ \e[m"
+#export PS1="\e[1;33m\A:\h:\w \$ \e[m"
+export PS1='\[\e[0;31m\][\u@\h \W]\[\e[m\]::'
+
 alias gs='git status'
 alias gl='git log | head'
 alias jn='jupyter notebook'
